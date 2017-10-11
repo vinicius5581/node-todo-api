@@ -7,15 +7,9 @@ var {User} = require('./models/user');
 
 var app = express();
 
-// app.use(bodyParser.json());
+app.use(bodyParser.json());
 
-// create application/json parser
-var jsonParser = bodyParser.json()
-
-// create application/x-www-form-urlencoded parser
-var urlencodedParser = bodyParser.urlencoded({ extended: false })
-
-app.post('/todos', jsonParser, (req, res) => {
+app.post('/todos', (req, res) => {
   var todo = new Todo({
     text: req.body.text
   });
