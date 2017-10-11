@@ -19,3 +19,9 @@ $ ./mongo
 
 ## Driver to use mongodb with node:
 https://github.com/mongodb/node-mongodb-native
+
+
+start application:
+```
+$ node server/server.js
+```
